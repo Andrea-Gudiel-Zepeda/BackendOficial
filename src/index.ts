@@ -2,9 +2,9 @@ import express, { Application } from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
 
-
 import indexRoutes from './routes/indexRoutes';
-import gamesRoutes from './routes/gamesRoutes';
+import publicationRoutes from './routes/publicationRoutes';
+import loginRoutes from './routes/loginRoutes';
 
 class Server{
 
@@ -26,7 +26,8 @@ class Server{
 
     routes():void{
         this.app.use('/',indexRoutes);
-        this.app.use('/api/games',gamesRoutes);
+        this.app.use('/api/login',loginRoutes);
+        this.app.use('/api/publication',publicationRoutes);
     }
 
     start(): void{
