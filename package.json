@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc -w",
     "dev": "nodemon build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./build/index.js"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +23,9 @@
   "devDependencies": {
     "@types/express": "^4.17.13",
     "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "16.16.0",
+    "npm": "8.11.0"
   }
 }
